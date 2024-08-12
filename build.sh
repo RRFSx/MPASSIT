@@ -28,6 +28,11 @@ elif [[ "$target" == "linux.*" || "$target" == "macosx.*" ]]; then
     unset -f module
     echo "Use platform configuration file: build.$target"
     source ./modulefiles/build.$target > /dev/null
+elif [[ "$target" == "hera" ]]; then
+    module purge
+    module use /scratch1/NCEPDEV/fv3-cam/Jili.Dong/mpas/sorc/modulefiles
+    module load ufs_hera.intel
+    PNETCDF=/apps/pnetcdf/1.12.3/intel_2023.2.0-impi/
 else
     echo "Use platform configuration file: build.$target.$compiler.lua"
     module use ./modulefiles
