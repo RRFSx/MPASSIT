@@ -1,5 +1,5 @@
 help([[
-This module loads libraries for rrfs-workflow
+This module loads libraries for MPASSIT
 ]])
 
 whatis([===[Loads libraries for rrfs-workflow ]===])
